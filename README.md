@@ -12,17 +12,18 @@ A Spring Boot-based web application that allows users to fill out a digital form
 ## 📸 Flow Diagram
 
 ```mermaid
+```mermaid
 graph TD
-    A[User scans QR Code] --> B[HTML Form Opens in Mobile]
-    B --> C[User submits data]
-    C --> D[Spring Boot Controller]
+    A[Scan QR Code] --> B[Display HTML Form]
+    B --> C[User Submits Form]
+    C --> D[Spring Boot API]
     D --> E[Google Sheets API]
-    E --> F[Main Sheet]
+    E --> F[Main Sheet (Editable)]
     E --> G[Backup Sheet (Read-only)]
-    H[Admin Login] --> I[Admin Dashboard]
-    I --> J[View/Search/Filter]
-    I --> K[Export to Excel/CSV]
+    F --> H[Admin Dashboard - View/Search/Export]
+    G --> H
 ```
+
 
 ---
 
